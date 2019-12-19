@@ -7,7 +7,7 @@ import bs4
 html = requests.get('https://finance.naver.com/sise/sise_index.nhn?code=KOSPI')
 
 # html text를 내가 보기 좋게 접근할 수 있도록 변경.
-# #now_value는 네이버 코스피 사이트에서 코스피 넘버 em id 값
+# #now_value는 네이버 코스피 사이트에서 코스피 넘버 '검사'로 찾아낸 값
 soup = bs4.BeautifulSoup(html.text, 'html.parser')
 kospi = soup.select_one('#now_value')
 
